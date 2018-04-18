@@ -10,7 +10,7 @@ injectGlobal`
 `;
 ReactDOM.render(
   <Provider store={store}>
-    <Main text={"Hello"} onSliderChange={"world"} />
+    <Main />
   </Provider>,
   document.getElementById("example")
 );

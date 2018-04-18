@@ -21,8 +21,9 @@ const muiTheme = getMuiTheme({
   }
 });
 export interface MainProps {
-  text: string;
-  onSliderChange: any;
+  text?: string;
+  onSliderChange?: any;
+  top?: number;
 }
 
 class Main extends React.Component<MainProps, {}> {
@@ -38,7 +39,7 @@ class Main extends React.Component<MainProps, {}> {
     return (
       <div className="main">
         <Text>
-          <h1>I have learned...</h1>
+          <h1 style={{ top: this.props.top + "vh" }}>I have learned...</h1>
           <p>{this.props.text}</p>
         </Text>
         <Footer>
