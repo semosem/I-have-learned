@@ -22,7 +22,7 @@ const Text = styled(Section)`
     position: absolute;
     top: 5vh;
     color: black;
-    animation: mymove 3s both;
+    animation: mymove 10s both;
     transition: all 0.25s;
   }
   > p {

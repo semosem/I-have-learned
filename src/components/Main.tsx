@@ -33,6 +33,7 @@ export interface MainProps {
 
 // create class based Main component
 class Main extends React.Component<MainProps, {}> {
+  // on event of change in slider value
   handleSliderChange(e: any, value: number) {
     theData.filter((data: any) => {
       if (data.id === value) {
@@ -50,7 +51,9 @@ class Main extends React.Component<MainProps, {}> {
     return (
       <div className="main">
         <Text>
-          <h1 style={{ top: headingPos + "vh" }}>I have learned...</h1>
+          <h1 style={{ top: headingPos + "vh" }}>
+            {headingPos > 5 ? "I have learned..." : "that"}
+          </h1>
           <p>{this.props.text}</p>
         </Text>
         <Footer>
