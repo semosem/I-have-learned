@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-import mSlider from "material-ui/Slider";
-
-const SlideHolder = styled.section`
+const Footer = styled.section`
   position: absolute;
   margin: auto;
   left: 0;
@@ -39,4 +37,4 @@ const SlideHolder = styled.section`
     }
   }
 `;
-export default SlideHolder;
+export default Footer;

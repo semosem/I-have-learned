@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import mSlider from "material-ui/Slider";
+import materialSlider from "material-ui/Slider";
 
-const Slider = styled(mSlider)`
+const Slider = styled(materialSlider)`
   position: relative !important;
   margin: auto;
   left: 0;

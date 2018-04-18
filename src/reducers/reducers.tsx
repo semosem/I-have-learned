@@ -1,8 +1,9 @@
-export function globalReducer(state: any, action: any): any {
+export function globalReducer(state: {}, action: any): {} {
+  console.log(action);
   switch (action.type) {
     case "CHANGE_TEXT":
       return action.payload;
-    case "POSITION_TEXT":
+    case "HEADING_POSITION":
       return action.payload;
     default:
       return state;

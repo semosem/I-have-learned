@@ -48,4 +48,4 @@ const Text = styled(Section)`
   }
 `;
 
-export { Text };
+export default Text;

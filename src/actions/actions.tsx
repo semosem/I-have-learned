@@ -1,14 +1,15 @@
-import { theContent } from "./data";
-
 export function sliderChange(text: any): any {
   return {
     type: "CHANGE_TEXT",
-    payload: { text: text }
+    payload: {
+      text: text,
+      top: 5
+    }
   };
 }
-export function textChange(top: number): any {
+export function headingPosition(top: number): any {
   return {
-    type: "POSITION_TEXT",
-    payload: { top: top + "vh" }
+    type: "HEADING_POSITION",
+    payload: { top: top }
   };
 }

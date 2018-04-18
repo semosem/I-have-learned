@@ -5,7 +5,7 @@ export const store = createStore(
   globalReducer,
   {
     text: "",
-    top: 5
+    top: 25
   }
 
   // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

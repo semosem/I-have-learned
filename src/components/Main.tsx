@@ -1,12 +1,14 @@
 import * as React from "react";
 import Slider from "./Slider";
-import { Text } from "./ChangingText";
+import Text from "./ChangingText";
 import Footer from "./Footer";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
-import { theContent } from "../actions/data/";
+import { theData } from "../actions/data/";
 import { connect } from "react-redux";
-import { sliderChange } from "../actions/actions";
+import { sliderChange, headingPosition } from "../actions/actions";
+
+//customizing material ui slider component
 const muiTheme = getMuiTheme({
   slider: {
     trackSize: 3,
@@ -20,26 +22,35 @@ const muiTheme = getMuiTheme({
     // rippleColor: "yellow"
   }
 });
+
+// an interface for optional main component props
 export interface MainProps {
   text?: string;
   onSliderChange?: any;
+  headingPosition?: any;
   top?: number;
 }
 
+// create class based Main component
 class Main extends React.Component<MainProps, {}> {
   handleSliderChange(e: any, value: number) {
-    theContent.filter((action: any) => {
-      if (action.id === value) {
-        this.props.onSliderChange(action.text);
+    theData.filter((data: any) => {
+      if (data.id === value) {
+        if (value === 0) {
+          this.props.headingPosition(25);
+        } else {
+          this.props.onSliderChange(data.text);
+        }
       }
     }, this);
   }
 
   render() {
+    const headingPos = this.props.top;
     return (
       <div className="main">
         <Text>
-          <h1 style={{ top: this.props.top + "vh" }}>I have learned...</h1>
+          <h1 style={{ top: headingPos + "vh" }}>I have learned...</h1>
           <p>{this.props.text}</p>
         </Text>
         <Footer>
@@ -58,7 +69,6 @@ class Main extends React.Component<MainProps, {}> {
           <p>
             Inspiration
             <a target="__blank" href="https://getcoleman.com/">
-              {" "}
               COLEMAN
             </a>
           </p>
@@ -68,10 +78,11 @@ class Main extends React.Component<MainProps, {}> {
   }
 }
 const mapStateToProps = (state: any) => {
-  // console.log(state);
+  console.log(state);
   return state;
 };
 const mapActionsToProps = {
-  onSliderChange: sliderChange
+  onSliderChange: sliderChange,
+  headingPosition: headingPosition
 };
 export default connect(mapStateToProps, mapActionsToProps)(Main);

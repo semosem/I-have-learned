@@ -1,4 +1,4 @@
-export const theContent = [
+export const theData = [
   {
     id: 0,
     text: "..."
