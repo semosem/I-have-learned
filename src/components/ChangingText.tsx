@@ -22,23 +22,22 @@ const Text = styled(Section)`
     position: absolute;
     top: 5vh;
     color: black;
-    animation: mymove 10s both;
+    animation: fade 10s both;
     transition: all 0.25s;
   }
   > p {
-    @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+    @import url("https://fonts.googleapis.com/css?family=Righteous");
     padding: 0 12vw 0 12vw;
     text-align: center;
-    font-family: "Playfair Display", serif;
+    font-family: "Righteous", cursive;
     font-size: 2rem;
     margin-top: 25vh;
-    animation: mymove 3s both;
     color: grey;
   }
   @media (max-width: 920px) {
     margin-top: 15vh;
   }
-  @keyframes mymove {
+  @keyframes fade {
     from {
       opacity: 0;
     }

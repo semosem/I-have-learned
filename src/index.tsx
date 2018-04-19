@@ -10,7 +10,7 @@ injectGlobal`
 `;
 ReactDOM.render(
   <Provider store={store}>
-    <Main />
+    <Main top={23} />
   </Provider>,
   document.getElementById("example")
 );

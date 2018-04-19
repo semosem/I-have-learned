@@ -66,7 +66,7 @@ class Main extends React.Component<MainProps, {}> {
             />
           </MuiThemeProvider>
           <ul>
-            <li>Start</li>
+            <li>Start sliding</li>
             <li>End</li>
           </ul>
           <p>
