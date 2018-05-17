@@ -1,6 +1,6 @@
 # I-have-learned
 
--Simple quote-displaying "app" implemented with React,Redux and TypeScript. fuse-box was used as a bundler.
+Simple quote-displaying "app" implemented with React,Redux and TypeScript. fuse-box was used as a bundler.
 
 ### Installing
 
