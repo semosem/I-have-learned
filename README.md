@@ -4,7 +4,6 @@ Simple quote-displaying "app" implemented with React,Redux and TypeScript. fuse-
 
 ### Installing
 
-A steps to get a development environment running on your local machine
 
 * use the following command to clone this repository
 
