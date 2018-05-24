@@ -3,7 +3,7 @@ const {
   CSSPlugin,
   WebIndexPlugin,
   Sparky,
-  ImageBase64Plugin,
+  ImageBase64Plugin
 } = require("fuse-box");
 const { src, task, watch, context } = require("fuse-box/sparky");
 
