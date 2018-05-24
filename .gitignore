@@ -7,7 +7,7 @@ dist
 .idea/
 .fusebox
 package-lock.json
-playground
+
 _playground
 _current_test
 .release
