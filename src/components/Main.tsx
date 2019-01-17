@@ -49,7 +49,7 @@ class Main extends React.Component<MainProps, {}> {
   render() {
     const headingPos = this.props.top;
     return (
-      <div className="main">
+      <div>
         <Text>
           <h1 style={{ top: headingPos + "vh" }}>
             {headingPos > 5 ? "I have learned..." : "that"}
@@ -88,4 +88,7 @@ const mapActionsToProps = {
   onSliderChange: sliderChange,
   headingPosition: headingPosition
 };
-export default connect(mapStateToProps, mapActionsToProps)(Main);
+export default connect(
+  mapStateToProps,
+  mapActionsToProps
+)(Main);
